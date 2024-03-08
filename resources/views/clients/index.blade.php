@@ -9,7 +9,7 @@
 
 
     <div class="container px-4 py-5">
-        <h4 class="pb-2 text-light">Leads Cadastrados</h4>
+        <h4 class="pb-2 text-light">Clientes Pagantes</h4>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-8">
 
             <table id="myTable" class="display">
