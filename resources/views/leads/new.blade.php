@@ -19,10 +19,9 @@
         }
     </style>
 
-    <div class="container px-4 py-5">
+    <div class="container px-4 pt-5">
         <h4 class="pb-2 text-light">Cadastrar Lead</h4>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-8">
-            
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-8">            
 
             @if (isset($errors) && count($errors)>0) 
             <div class="alert alert-danger m-4" role="alert">
@@ -34,9 +33,8 @@
               </div>
             @endif
             
-            <form action="{{ route("leadsNewStore") }}" method="POST">
+            <form method="POST">
                 @csrf
-
                 <div class="row m-2">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Nome</label>
                     <div class="col">
@@ -71,17 +69,14 @@
                 <div class="form-group row m-2">
                     <label class="col-sm-2 col-form-label">Tags</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" placeholder="Adiicione tags" id="inputTag" value="{{ old('tags') }}" name="tags">
+                        <input type="text" class="form-control" placeholder="Adicione tags" id="inputTag" value="{{ old('tags') }}" name="tags">
                     </div>
-                </div>               
-               
+                </div>     
 
                 <div class="text-end m-4">
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
                 </div>
-
             </form>
-
         </div>
     </div>
 @endsection

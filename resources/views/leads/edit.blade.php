@@ -23,11 +23,9 @@
         }
     </style>
 
-    <div class="container px-4 py-5">
+    <div class="container px-4 pt-5">
         <h4 class="pb-2 text-light">Editar Lead</h4>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-8">
-            
-
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-8">    
             @if (isset($errors) && count($errors)>0) 
             <div class="alert alert-danger m-4" role="alert">
                 <h4 class="alert-heading">Erro!</h4>
@@ -38,10 +36,9 @@
               </div>
             @endif
             
-            <form action="{{ route("leadsEditUpdate", $lead->id) }}" method="POST">
+            <form method="POST">
                 @csrf
                 @method("PUT")
-
                 <div class="row m-2">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Nome</label>
                     <div class="col">
@@ -85,15 +82,12 @@
                     <div class="col-sm-2 m-2">
                         <input class="form-check-input" type="checkbox" name="convertido" @if ($lead->convertido == 1) checked @endif>
                     </div>
-                </div>  
-               
+                </div>                 
 
                 <div class="text-end m-4">
                     <button type="submit" class="btn btn-primary">Editar</button>
                 </div>
-
             </form>
-
         </div>
     </div>
 @endsection

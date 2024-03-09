@@ -1,18 +1,9 @@
 @extends('main')
-
-@section('content')
-    <script>
-        $(document).ready(function() {
-            let table = new DataTable('#myTable');
-        });
-    </script>
-
-
-    <div class="container px-4 py-5">
+@section('content')   
+    <div class="container px-4 pt-5">
         <h4 class="pb-2 text-light">Clientes Pagantes</h4>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-8">
-
-            <table id="myTable" class="display">
+            <table id="LeadTable" class="display">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -26,7 +17,7 @@
                 <tbody>
                     @foreach ($leads as $lead)
                     <tr>
-                        <td class="w20">{{ $lead->id }}</td>
+                        <td>{{ $lead->id }}</td>
                         <td>{{ $lead->nome }} {{ $lead->sobrenome }}</td>
                         <td>{{ $lead->email }}</td>
                         <td>{{ $lead->empresa }}</td>
@@ -45,7 +36,6 @@
                     @endforeach
                 </tbody>
             </table>
-
         </div>
     </div>
 @endsection

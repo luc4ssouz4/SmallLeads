@@ -11,8 +11,7 @@ class LeadsController extends Controller
 {
     
     public function index()
-    {
-        
+    {        
         $leads = Leads::all();
         return view('dashboard', compact('leads'));
     }    

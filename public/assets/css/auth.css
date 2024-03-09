@@ -1,0 +1,54 @@
+html,
+body {
+  height: 100%;
+  background-color: #111827;
+  color: #e2e2e2;
+}
+
+.form-control{
+  background-color: #1f2937;
+  border: 1px solid #1f2937;
+  color: #c6c6c6;       
+}       
+.form-floating>.form-control:not(:placeholder-shown)~label::after, .form-control:focus, .form-floating>.form-control:focus~label::after{
+  background-color: #1f2937;            
+  color: #c6c6c6;   
+}
+.form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-control:focus~label{
+  color: #fff;
+}
+
+
+button{
+  margin-top:10px;
+}
+
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+
+.form-signin input {
+  border-radius: 0;
+}
+
+
+.form-control:first-child {
+  margin-bottom: -1px;
+  border-top-right-radius: 0.375rem;;
+  border-top-left-radius: 0.375rem;;
+}
+
+.form-control:last-child {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0.375rem;;
+  border-bottom-left-radius: 0.375rem;;
+}
+
+

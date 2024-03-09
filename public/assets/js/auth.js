@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-
 $("#loginForm").submit(function(e) {
-    e.preventDefault();
+    $("#loginForm .btn").attr("disabled", "disabled");
+    e.preventDefault();    
     $.ajax({
         type: "POST",
         url: $(this).attr('action'),
@@ -10,16 +10,14 @@ $("#loginForm").submit(function(e) {
         success: function(){
             location.reload();
         }
-    }).fail(function (data, textStatus) {
-        
+    }).fail(function (data) {        
         $("#messageError").text(data.responseJSON.message);
-
-    });
-    
+        $("#loginForm .btn").removeAttr("disabled");
+    });    
 });
 
-
 $("#loginRegister").submit(function(e) {
+    $("#loginRegister .btn").attr("disabled", "disabled");
     e.preventDefault();
     $.ajax({
         type: "POST",
@@ -28,12 +26,10 @@ $("#loginRegister").submit(function(e) {
         success: function(){
             location.reload();
         }
-    }).fail(function (data, textStatus) {
-        
+    }).fail(function (data) {        
         $("#messageError").text(data.responseJSON.message);
-
-    });
-    
+        $("#loginRegister .btn").removeAttr("disabled");
+    });    
 });
 
 });
